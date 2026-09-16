@@ -1,0 +1,98 @@
+{
+  "seed": 42,
+  "seen_test_size": 120,
+  "structures": [
+    {
+      "name": "symmetric_polynomial_identity",
+      "seen_template_ids": [
+        "symmetric_polynomial_identity.seen_0",
+        "symmetric_polynomial_identity.seen_1",
+        "symmetric_polynomial_identity.seen_2"
+      ],
+      "tool": "expand_symmetric_identity",
+      "unseen_template_ids": [
+        "symmetric_polynomial_identity.unseen_0",
+        "symmetric_polynomial_identity.unseen_1"
+      ]
+    },
+    {
+      "name": "factorization",
+      "seen_template_ids": [
+        "factorization.seen_0",
+        "factorization.seen_1",
+        "factorization.seen_2"
+      ],
+      "tool": "factor_difference_of_squares",
+      "unseen_template_ids": [
+        "factorization.unseen_0",
+        "factorization.unseen_1"
+      ]
+    },
+    {
+      "name": "substitution",
+      "seen_template_ids": [
+        "substitution.seen_0",
+        "substitution.seen_1",
+        "substitution.seen_2"
+      ],
+      "tool": "substitute_expression",
+      "unseen_template_ids": [
+        "substitution.unseen_0",
+        "substitution.unseen_1"
+      ]
+    },
+    {
+      "name": "linear_elimination",
+      "seen_template_ids": [
+        "linear_elimination.seen_0",
+        "linear_elimination.seen_1",
+        "linear_elimination.seen_2"
+      ],
+      "tool": "solve_linear_system",
+      "unseen_template_ids": [
+        "linear_elimination.unseen_0",
+        "linear_elimination.unseen_1"
+      ]
+    },
+    {
+      "name": "ratio_proportion",
+      "seen_template_ids": [
+        "ratio_proportion.seen_0",
+        "ratio_proportion.seen_1",
+        "ratio_proportion.seen_2"
+      ],
+      "tool": "solve_proportion",
+      "unseen_template_ids": [
+        "ratio_proportion.unseen_0",
+        "ratio_proportion.unseen_1"
+      ]
+    },
+    {
+      "name": "recurrence",
+      "seen_template_ids": [
+        "recurrence.seen_0",
+        "recurrence.seen_1",
+        "recurrence.seen_2"
+      ],
+      "tool": "unroll_recurrence",
+      "unseen_template_ids": [
+        "recurrence.unseen_0",
+        "recurrence.unseen_1"
+      ]
+    }
+  ],
+  "target_formats": {
+    "baseline": "<exact number>",
+    "oracle": "<exact number>; gold structure and tool are included in the prompt",
+    "structure_aware": "STRUCTURE: <label>\\nTOOL: <label>\\nANSWER: <exact number>"
+  },
+  "train_sets_are_nested": true,
+  "train_sizes": [
+    50,
+    100,
+    200,
+    500
+  ],
+  "unseen_test_size": 120,
+  "verification": "Every generated answer passed an independent SymPy check."
+}

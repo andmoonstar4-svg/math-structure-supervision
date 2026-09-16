@@ -1,0 +1,47 @@
+{
+  "has_structure_with_multiple_tools": false,
+  "has_tool_with_multiple_structures": false,
+  "is_many_to_many": false,
+  "is_one_to_one": true,
+  "structure_to_tools": {
+    "factorization": [
+      "factor_difference_of_squares"
+    ],
+    "linear_elimination": [
+      "solve_linear_system"
+    ],
+    "ratio_proportion": [
+      "solve_proportion"
+    ],
+    "recurrence": [
+      "unroll_recurrence"
+    ],
+    "substitution": [
+      "substitute_expression"
+    ],
+    "symmetric_polynomial_identity": [
+      "expand_symmetric_identity"
+    ]
+  },
+  "tool_to_structures": {
+    "expand_symmetric_identity": [
+      "symmetric_polynomial_identity"
+    ],
+    "factor_difference_of_squares": [
+      "factorization"
+    ],
+    "solve_linear_system": [
+      "linear_elimination"
+    ],
+    "solve_proportion": [
+      "ratio_proportion"
+    ],
+    "substitute_expression": [
+      "substitution"
+    ],
+    "unroll_recurrence": [
+      "recurrence"
+    ]
+  },
+  "warning": "Every structure maps to exactly one tool and every tool maps to exactly one structure; the two auxiliary labels are effectively redundant in this dataset."
+}

@@ -1,0 +1,170 @@
+{
+  "seed": 42,
+  "seen_test_size": 120,
+  "target_formats": {
+    "baseline": "<exact number>",
+    "oracle": "<exact number>; gold structure and tool are included in the prompt",
+    "structure_aware": "STRUCTURE: <label>\\nTOOL: <label>\\nANSWER: <exact number>",
+    "tool_routing": "STRUCTURE: <label>\\nTOOL: <label>\\nARGUMENTS: <JSON object>"
+  },
+  "taxonomy_definitions": {
+    "structure": "a mathematical relationship or pattern present in the problem",
+    "tool": "a canonical operation or solving strategy applied to exploit that structure"
+  },
+  "taxonomy_version": "v2",
+  "train_sets_are_nested": true,
+  "train_sizes": [
+    50,
+    100,
+    200,
+    500
+  ],
+  "unseen_test_size": 120,
+  "variants": [
+    {
+      "key": "linear_elimination",
+      "seen_template_ids": [
+        "linear_elimination.seen_0",
+        "linear_elimination.seen_1"
+      ],
+      "structure": "two_linear_relations",
+      "tool": "elimination",
+      "unseen_template_ids": [
+        "linear_elimination.unseen_0"
+      ]
+    },
+    {
+      "key": "linear_substitution",
+      "seen_template_ids": [
+        "linear_substitution.seen_0",
+        "linear_substitution.seen_1"
+      ],
+      "structure": "two_linear_relations",
+      "tool": "substitution",
+      "unseen_template_ids": [
+        "linear_substitution.unseen_0"
+      ]
+    },
+    {
+      "key": "identity_factorization",
+      "seen_template_ids": [
+        "identity_factorization.seen_0",
+        "identity_factorization.seen_1"
+      ],
+      "structure": "polynomial_identity",
+      "tool": "factorization",
+      "unseen_template_ids": [
+        "identity_factorization.unseen_0"
+      ]
+    },
+    {
+      "key": "identity_expansion",
+      "seen_template_ids": [
+        "identity_expansion.seen_0",
+        "identity_expansion.seen_1"
+      ],
+      "structure": "polynomial_identity",
+      "tool": "expansion",
+      "unseen_template_ids": [
+        "identity_expansion.unseen_0"
+      ]
+    },
+    {
+      "key": "ratio_scaling",
+      "seen_template_ids": [
+        "ratio_scaling.seen_0",
+        "ratio_scaling.seen_1"
+      ],
+      "structure": "equivalent_ratios",
+      "tool": "proportional_scaling",
+      "unseen_template_ids": [
+        "ratio_scaling.unseen_0"
+      ]
+    },
+    {
+      "key": "ratio_cross_multiplication",
+      "seen_template_ids": [
+        "ratio_cross_multiplication.seen_0",
+        "ratio_cross_multiplication.seen_1"
+      ],
+      "structure": "equivalent_ratios",
+      "tool": "cross_multiplication",
+      "unseen_template_ids": [
+        "ratio_cross_multiplication.unseen_0"
+      ]
+    },
+    {
+      "key": "recurrence_iteration",
+      "seen_template_ids": [
+        "recurrence_iteration.seen_0",
+        "recurrence_iteration.seen_1"
+      ],
+      "structure": "additive_recurrence",
+      "tool": "iteration",
+      "unseen_template_ids": [
+        "recurrence_iteration.unseen_0"
+      ]
+    },
+    {
+      "key": "recurrence_substitution",
+      "seen_template_ids": [
+        "recurrence_substitution.seen_0",
+        "recurrence_substitution.seen_1"
+      ],
+      "structure": "additive_recurrence",
+      "tool": "substitution",
+      "unseen_template_ids": [
+        "recurrence_substitution.unseen_0"
+      ]
+    },
+    {
+      "key": "symmetric_expansion",
+      "seen_template_ids": [
+        "symmetric_expansion.seen_0",
+        "symmetric_expansion.seen_1"
+      ],
+      "structure": "symmetric_sum_product",
+      "tool": "expansion",
+      "unseen_template_ids": [
+        "symmetric_expansion.unseen_0"
+      ]
+    },
+    {
+      "key": "symmetric_factorization",
+      "seen_template_ids": [
+        "symmetric_factorization.seen_0",
+        "symmetric_factorization.seen_1"
+      ],
+      "structure": "symmetric_sum_product",
+      "tool": "factorization",
+      "unseen_template_ids": [
+        "symmetric_factorization.unseen_0"
+      ]
+    },
+    {
+      "key": "expression_substitution",
+      "seen_template_ids": [
+        "expression_substitution.seen_0",
+        "expression_substitution.seen_1"
+      ],
+      "structure": "transformed_expression",
+      "tool": "substitution",
+      "unseen_template_ids": [
+        "expression_substitution.unseen_0"
+      ]
+    },
+    {
+      "key": "expression_expansion",
+      "seen_template_ids": [
+        "expression_expansion.seen_0",
+        "expression_expansion.seen_1"
+      ],
+      "structure": "transformed_expression",
+      "tool": "expansion",
+      "unseen_template_ids": [
+        "expression_expansion.unseen_0"
+      ]
+    }
+  ],
+  "verification": "Every generated answer passed an independent SymPy check and matched deterministic plugin(tool, tool_args) execution."
+}

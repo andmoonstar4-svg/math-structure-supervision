@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.test_deps/
+.smoke_data/
+
+# Generated model artifacts
+data/generated/
+outputs/
+checkpoints/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

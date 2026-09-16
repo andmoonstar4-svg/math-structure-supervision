@@ -1,0 +1,61 @@
+{
+  "has_structure_with_multiple_tools": true,
+  "has_tool_with_multiple_structures": true,
+  "is_many_to_many": true,
+  "is_one_to_one": false,
+  "structure_to_tools": {
+    "additive_recurrence": [
+      "iteration",
+      "substitution"
+    ],
+    "equivalent_ratios": [
+      "cross_multiplication",
+      "proportional_scaling"
+    ],
+    "polynomial_identity": [
+      "expansion",
+      "factorization"
+    ],
+    "symmetric_sum_product": [
+      "expansion",
+      "factorization"
+    ],
+    "transformed_expression": [
+      "expansion",
+      "substitution"
+    ],
+    "two_linear_relations": [
+      "elimination",
+      "substitution"
+    ]
+  },
+  "tool_to_structures": {
+    "cross_multiplication": [
+      "equivalent_ratios"
+    ],
+    "elimination": [
+      "two_linear_relations"
+    ],
+    "expansion": [
+      "polynomial_identity",
+      "symmetric_sum_product",
+      "transformed_expression"
+    ],
+    "factorization": [
+      "polynomial_identity",
+      "symmetric_sum_product"
+    ],
+    "iteration": [
+      "additive_recurrence"
+    ],
+    "proportional_scaling": [
+      "equivalent_ratios"
+    ],
+    "substitution": [
+      "additive_recurrence",
+      "transformed_expression",
+      "two_linear_relations"
+    ]
+  },
+  "warning": null
+}

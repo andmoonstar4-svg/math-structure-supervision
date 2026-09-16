@@ -1,0 +1,11 @@
+# Core data generation and verification
+sympy>=1.12,<2
+
+# Training and evaluation
+torch>=2.1
+transformers>=4.40,<5
+peft>=0.10,<1
+accelerate>=0.29,<2
+
+# Tests
+pytest>=8,<9

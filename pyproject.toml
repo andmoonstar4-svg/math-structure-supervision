@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "math-structure-supervision"
+version = "0.1.0"
+description = "A small experiment comparing answer-only, structure-aware, and oracle supervision for algebra reasoning."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "sympy>=1.12,<2",
+  "torch>=2.1",
+  "transformers>=4.40,<5",
+  "peft>=0.10,<1",
+  "accelerate>=0.29,<2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
